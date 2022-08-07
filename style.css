@@ -246,10 +246,30 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
 }
 
 .info {
-  font-size: 30px;
+  font-size: 18px;
   color: #f1f1f1;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.container-btn button {
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  z-index: 20;
+  margin: 25px;
+}
+
+.container-btn button:hover {
+  background-color: rgb(215, 215, 215);
 }

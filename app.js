@@ -1,6 +1,7 @@
 let currentPlayer = 'X';
 
 const info = document.querySelector('.info');
+const containerBtn = document.querySelector('.container-btn');
 info.textContent = `${currentPlayer} should play`;
 
 const cells = document.querySelectorAll('.cell');
@@ -44,7 +45,8 @@ function verification() {
     if (a === '' || b === '' || c === '') {
       continue;
     } else if (a === b && b === c) {
-      info.textContent = ` Congrats ! Player ${currentPlayer} won ! Press F5 or refresh the page to start again`;
+      info.textContent = ` Congrats ! Player ${currentPlayer} won ! Press restart to start again`;
+      containerBtn.style.display = 'flex';
       lock = true;
       return;
     }
@@ -53,7 +55,8 @@ function verification() {
   //tie game, all boxes ticked without a winner
 
   if (!currentGame.includes('')) {
-    info.textContent = 'Tie game ! Press F5 or refresh the page to try again.';
+    info.textContent = 'Tie game ! Press restart to try again.';
+    containerBtn.style.display = 'flex';
     lock = true;
     return;
   }
@@ -63,4 +66,8 @@ function verification() {
 function switchPlayer() {
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   info.textContent = `${currentPlayer} should play`;
+}
+
+function refreshPage() {
+  window.location.reload();
 }
