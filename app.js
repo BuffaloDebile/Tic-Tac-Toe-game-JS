@@ -1,7 +1,7 @@
 let currentPlayer = 'X';
 
 const info = document.querySelector('.info');
-info.textContent = `${currentPlayer} turn`;
+info.textContent = `${currentPlayer} should play`;
 
 const cells = document.querySelectorAll('.cell');
 
@@ -62,5 +62,5 @@ function verification() {
 
 function switchPlayer() {
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-  info.textContent = `Au tour de ${currentPlayer}`;
+  info.textContent = `${currentPlayer} should play`;
 }
