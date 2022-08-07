@@ -246,7 +246,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: ;
+  z-index: 100;
 }
 
 .info {
